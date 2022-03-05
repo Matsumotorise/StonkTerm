@@ -1,6 +1,4 @@
 .ipynb_checkpoints
 */__pycache__/
 *.egg-info
-assets/*
-stock_analysis/*
 
