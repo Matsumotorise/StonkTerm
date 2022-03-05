@@ -21,9 +21,11 @@ class MenuBar(tk.Frame):
 
         self.intervalSelection = tk.StringVar(self)
         self.intervalSelection.set(intervals[0])
-        self.timeIntervalMenu = tk.OptionMenu(self, self.intervalSelection,  *intervals)
+        self.timeIntervalMenu = tk.OptionMenu(self, self.intervalSelection,command =self.updateParent,  *intervals)
         #self.timeIntervalMenu.pack(side=tk.TOP, anchor=tk.N)
         self.timeIntervalMenu.grid(row=0, column=1, sticky="nsew", **paddings)
 
     def updateParent(self, event=None):
-        self.parentFrame.handleTickerQuery(self.tickerEntryBox.get(), self.intervalSelection.get())
+        print(self.tickerEntryBox.get())
+        if self.tickerEntryBox.get() != "":
+            self.parentFrame.handleTickerQuery(self.tickerEntryBox.get(), self.intervalSelection.get())

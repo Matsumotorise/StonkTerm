@@ -5,7 +5,7 @@ from stock_analysis import StockVisualizer
 
 
 def main():
-    wm = WindowManager("ShibaTerm")
+    wm = WindowManager("StonkTerm")
     wm.start()
 
 

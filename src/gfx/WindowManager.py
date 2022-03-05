@@ -8,8 +8,8 @@ class WindowManager():
     def __init__(self, name):
         self.window = MainWindow(name)
 
-        #self.window.tk.call("source", "assets/Azure-ttk-theme-2.1.0/azure.tcl")
-        #self.window.tk.call("set_theme", "dark")
+        self.window.tk.call("source", "assets/Azure-ttk-theme-2.1.0/azure.tcl")
+        self.window.tk.call("set_theme", "dark")
 
     def start(self):
         self.window.mainloop()
